@@ -1,0 +1,17 @@
+{
+  "name": "my-project",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Amirul Asyraaf <amirulasyraaf@ifcagroup.com>",
+  "license": "MIT",
+  "scripts": {
+  "start:frontend": "yarn workspace frontend start",
+  "start:backend": "yarn workspace backend start",
+  "start": "concurrently \"yarn start:frontend\" \"yarn start:backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0"
+  }
+}
